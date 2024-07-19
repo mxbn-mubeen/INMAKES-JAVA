@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Employee_details>
+    <Employee>
+        <empid>1000</empid>
+        <empname>Aravind</empname>
+        <designation>Programmer</designation>
+        <salary>45000</salary>
+    </Employee>
+    <Employee>
+        <empid>1001</empid>
+        <empname>Balasubramaniyan</empname>
+        <designation>Testing Engineer</designation>
+        <salary>45000</salary>
+    </Employee>
+    <Employee>
+        <empid>1002</empid>
+        <empname>Chandrasekar</empname>
+        <designation>Manager</designation>
+        <salary>78000</salary>
+    </Employee>
+</Employee_details>
