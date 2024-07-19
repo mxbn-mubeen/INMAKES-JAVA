@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window History Object</title>
+</head>
+<body>
+    <h1>The Window History Object</h1>
+    <script>
+        function previousPage() {
+            window.history.back();
+        }
+
+        function nextPage() {
+            window.history.forward();
+        }
+
+        function gotoPage() {
+            var num = document.getElementById("num").value;
+            alert(num);
+            window.history.go(num);
+        }
+    </script>
+
+    <input type="button" value="backward" onclick="previousPage()">
+    <input type="button" value="forward" onclick="nextPage()">
+    <br>
+    <input type="text" id="num">
+    <input type="button" value="go" onclick="gotoPage()">
+    <script>
+        document.write('<br>History Length: ' + history.length);
+    </script>
+</body>
+</html>

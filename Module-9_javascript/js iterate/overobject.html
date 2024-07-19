@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for of loop iterate object</title>
+</head>
+<body>
+    <script>
+        const person={'firstname':'john','lastname':'smith','age':30};
+        for (const i in person){
+            document.write(i+":"+person[i]+"<br>")
+        }
+        for(const i of Object.entries(person)){
+            document.write(i+"<br>")
+        }
+    </script>
+</body>
+</html>

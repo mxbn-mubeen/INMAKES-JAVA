@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>arrow function as expersssion</title>
+</head>
+<body>
+    <script>
+       let current_year=2022;
+       let checkLeapyear=(current_year%4==0)?()=>document.write('Leap year') : ()=>document.write('Not a Leap year');
+       checkLeapyear();// calling function
+
+       let checkLeapyear2=(last_year)=>(last_year%4==0)?document.write('<br>Leap year'):document.write('<br> not leap year');
+       checkLeapyear2(2020);//calling function passsing arguments
+    </script>
+</body>
+</html>

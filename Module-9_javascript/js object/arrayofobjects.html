@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array of objects</title>
+</head>
+<body>
+    <script>
+        const person=[
+            {
+                'name':'akash',
+                'gender':'male',
+                'age':25
+            },
+            {
+                'name':'banu',
+                'gender':'female',
+                'age':26
+            },
+            {
+                'name':'chandrasekar',
+                'gender':'male',
+                'age':30
+            },
+        ];
+
+        document.write('<table border=1 width=200>');
+        document.write('<tr><th>name</th><th>gender</th><th>age</th></tr>');
+
+        for(i=0;i<person.length;i++){
+            document.write('<tr><td>'+person[i].name+'</td><td>'+person[i].gender+'</td><td>'+person[i].age+'</tr>');
+
+        }
+        document.write('</table>');
+    </script>
+</body>
+</html>

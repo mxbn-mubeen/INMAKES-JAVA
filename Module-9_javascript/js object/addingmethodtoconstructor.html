@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object constructor</title>
+</head>
+<body>
+    <script>
+        function person(name,gender,age){ //constructor
+            this.name=name;
+            this.gender=gender;
+            this.age=age;
+            this.details=function(){ //function
+                return this.name+' he is '+this.age+' years old.'
+            };
+        }
+        
+       
+        p1=new person('tamilselavan','male',38);//constructor calling
+        document.write(p1.details());
+
+    </script>
+</body>
+</html>

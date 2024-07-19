@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>var,let,const keyword</title>
+    <script type="text/javascript">
+
+        var a;////default value undefined [global (or) function scope]
+        function f(){
+
+            let b;//default value undefined [local (or) block scope]
+            document.write("a="+a+"<br>")
+            document.write("b="+b+"<br>")
+
+            var a=10;//can be redeclared and updated
+            b=5;//can be  updated but not redeclared [note= redcalre let b=5; means error]
+            document.write("a="+a+"<br>")
+            document.write("b="+b+"<br>")
+
+            const pi=3.14; 
+            document.write("pi="+pi+"<br>")
+            pi=8.14;//cannot be redeclared and updated
+            document.write("pi="+pi+"<br>")
+        }
+
+    
+
+    </script>
+</head>
+<body onload="f()">
+    
+</body>
+</html>

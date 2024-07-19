@@ -1,0 +1,36 @@
+label{
+    float: left;
+    width: 4em;
+}
+input{
+    margin-left: 1em;
+    margin-bottom: 5em;
+    padding: 5px 15px;
+    border-radius: 5px;
+    border-color: #4682b4;
+}
+legend{
+    background-color: #d2691e;
+    color: #fff;
+    padding: 3px 6px;
+    width: 100px;
+    text-align: center;
+}
+fieldset{
+    padding: 12px 24px;
+    width: 200px;
+    border-color: red;
+    border-radius: 5px;
+}
+#submit1{
+    color: white;
+    border-radius: 5px;
+    width: 100px;
+    height: 30px;
+    background-color: #00BFFF;
+    opacity: 0.8;
+    transition: 0.5s;
+}
+#submit:hover{
+    background-color: #4169E1;
+}

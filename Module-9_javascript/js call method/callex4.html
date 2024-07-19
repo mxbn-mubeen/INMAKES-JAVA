@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Call Method Examples-4</title>
+</head>
+<body>
+    <script type="text/javascript">
+        var obj = {a: 10,b: 20};
+        
+            function sum (){
+                return this.a + this.b;
+            }
+        
+
+        var result = sum.call(obj);
+        document.write('Result: ' + result);
+    </script>
+</body>
+</html>

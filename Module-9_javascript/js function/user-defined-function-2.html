@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>user-defined-function</title>
+</head>
+<body>
+    <h1>user defined function</h1>
+    <script type="text/javascript">
+        function showArea(length, breadth) {
+            this.length = length;
+            this.breadth = breadth;
+            var area = length * breadth; // Corrected variable name
+            document.getElementById("p1").innerHTML = 'Area of rectangle: ' + area;
+        }
+    </script>
+    <form>
+        Enter the length: <input type="number" name="length"><br>
+        Enter the breadth: <input type="number" name="breadth"><br>
+        <input type="button" value="Calculate Area" onclick="showArea(length.value, breadth.value)">
+        <p id="p1" style="color: red;"></p>
+    </form>
+</body>
+</html>

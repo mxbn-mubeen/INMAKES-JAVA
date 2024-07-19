@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for each method</title>
+</head>
+<body>
+    <script type="text/javascript">
+        var colors=['red','green','blue','yellow','orange','black','white']
+        document.write("passing Array values to a function  using for each method....<br>");
+        colors.forEach(myFunction);
+        function myFunction(value,index){
+            document.write('Index:'+index+ 'value:' +value+'<br>');
+        }
+
+        document.write("print array values using for each metrhod without function...<br>");
+        colors.forEach((value,index)=>
+        {
+            document.write('index:'+index+ 'value:' +value+'<br>');
+        });
+
+    </script>
+</body>
+</html>

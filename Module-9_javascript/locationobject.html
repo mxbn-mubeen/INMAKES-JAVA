@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window Location Object</title>
+</head>
+<body>
+    <h1>The Window Location Object</h1>
+    <p id="origin"></p>
+    <p id="host"></p>
+    <p id="hostname"></p>
+    <p id="href"></p>
+    <p id="pathname"></p>
+    <p id="port"></p>
+
+    <script>
+        location.assign("D:\\java\\Module-9_javascript\\locationobject.html");
+
+        let origin = window.location.origin;
+        document.getElementById('origin').innerHTML = 'Origin: ' + origin;
+
+        let host = window.location.host;
+        document.getElementById('host').innerHTML = 'Host: ' + host;
+
+        let hostname = window.location.hostname;
+        document.getElementById('hostname').innerHTML = 'Hostname: ' + hostname;
+
+        let href = window.location.href;
+        document.getElementById('href').innerHTML = 'Hyperlink Reference: ' + href;
+
+        let pathname = window.location.pathname;
+        document.getElementById('pathname').innerHTML = 'Path: ' + pathname;
+
+        let port = window.location.port;
+        document.getElementById('port').innerHTML = 'Port: ' + port;
+    </script>
+</body>
+</html>

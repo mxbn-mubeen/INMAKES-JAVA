@@ -1,0 +1,27 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Call Method in JavaScript</title>
+</head>
+<body>
+    <h1>Call Method in JavaScript</h1>
+    <script type="text/javascript">
+        const animals = [
+            { species: 'Lion', name: 'King' },
+            { species: 'Whale', name: 'Fail' }
+        ];
+
+        for (let i = 0;i<animals.length;i++) {
+            (function(i){
+                this.print = function () {
+                document.write('<br>#'+ i  +' '+ this.species + ': ' + this.name);
+            }
+            this.print();
+            }).call(animals[i], i);
+           
+           
+        }
+    </script>
+</body>
+</html>

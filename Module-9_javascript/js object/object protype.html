@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object protype</title>
+</head>
+<body>
+    <script>
+        function person(name,gender,age){//constructor
+            this.name=name;
+            this.gender=gender;
+            this.age=age;
+        }
+        person.city='chennai';
+        p1=new person('tamilselvan','male',30);//constructor calling
+        document.write(p1.city);//undefined
+
+        //add prototype here
+        person.prototype.city='chennai';
+        document.write('<br>'+p1.city);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>windowdailogbox</title>
+</head>
+<body>
+    <h1>window dailog box</h1>
+    <form>
+        <input type="button" name="button1" value="create new window" onclick="opennewwindow()"><br><br>
+        <input type="button" name="button2" value="close new window" onclick="closenewwindow()"><br><br>
+        <input type="button" name="button3" value="close the existing window" onclick="window.close()"><br><br>
+    </form>
+    
+    <script>
+       var win;
+
+function opennewwindow() {
+    win = window.open("", "mywindow", "width=500px,height=200px,screenX=100,screenY=100");
+    let h = win.outerHeight;
+    let w = win.outerWidth;
+    win.document.write("<br> Window name: " + win.name);
+    win.document.write("<br> Height and width of the window are: " + w + " and " + h);
+}
+
+function closenewwindow() {
+    win.close();
+}
+
+    </script>
+</body>
+</html>

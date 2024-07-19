@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>special operator</title>
+</head>
+<body>
+    <script lang="javascrript">
+
+        a=1;
+        b=2.5;
+        c=true;
+        d="hello";
+        x=(2,3);
+        colors=new Array('red','green','blue');
+        person= {firstName:"john",lastName:"smith",age:50};
+
+        document.write("type of a="+typeof(a)+"<br>");
+        document.write("type of b="+typeof(a)+"<br>");
+        document.write("type of c="+typeof(a)+"<br>");
+        document.write("type of d="+typeof(a)+"<br>");
+        document.write("type of x="+typeof(a)+"<br>");
+        document.write("type of colors="+typeof(colors)+"<br>");
+
+        document.write("'firstName' in person=");
+        document.write('firstName' in person);
+        delete person.age;// delete age in person
+        document.write("<br>"+" 'age' in person=");
+        document.write('age' in person);
+        document.write("<br>"+" 'colors' instanceof Array=");
+        document.write(colors instanceof Array);
+        document.write("<br>"+" 'person' instanceof Object=");
+        document.write(person instanceof Object);
+
+        function* showPrices(i){
+            while(i<3){
+                yield i++; //yeild operator
+            }
+        }
+
+        price=showPrices(0);
+
+        document.write("<br>"+price.next().value);
+        document.write("<br>"+price.next().value);
+        document.write("<br>"+price.next().value);
+
+    </script>
+</body>
+    <h2>example of void</h2>
+    <a href="javascript.void(0);">useless link</a><br>
+    <a href="javascript:void(document.body.style.backgroundColor='red');">change background color</a>
+</html>

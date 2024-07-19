@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function displayFrames(){
+            var frames=window.frames;
+            alert('Frame Lenght:'+frames.length);
+            for(i=0;i<frames.length;i++)
+                alert(document.getElementById('frame')[i].name)
+        }
+    </script>
+</head>
+    <frameset rows="*,*" cols="*,*" border=5 bordercolor="blue" onload="displayFrames()">
+
+        <frame src="arrowfunction1.html" name="topleft">
+        <frame src="arrowfunction2.html" name="topright">
+        <frame src="arrowfunction3.html" name="bottomleft">
+        <frame src="arrowfunction4.html" name="bottomright">
+
+    </frameset>
+</html>

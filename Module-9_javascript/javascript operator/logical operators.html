@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logical Operators Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        pre {
+            background: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Logical Operators Example</h1>
+    <div id="output"></div>
+
+    <script>
+        // Function to display the result in the HTML page
+        function displayResult(description, result) {
+            const outputDiv = document.getElementById('output');
+            const resultElement = document.createElement('pre');
+            resultElement.textContent = `${description}: ${result}`;
+            outputDiv.appendChild(resultElement);
+        }
+
+        // Initialize variables
+        let a = true;
+        let b = false;
+        let c = true;
+
+        // Logical AND (&&)
+        let andResult = a && b; // false, because one operand is false
+        displayResult('Logical AND (a && b)', andResult);
+
+        andResult = a && c; // true, because both operands are true
+        displayResult('Logical AND (a && c)', andResult);
+
+        // Logical OR (||)
+        let orResult = a || b; // true, because one operand is true
+        displayResult('Logical OR (a || b)', orResult);
+
+        orResult = b || b; // false, because both operands are false
+        displayResult('Logical OR (b || b)', orResult);
+
+        // Logical NOT (!)
+        let notResult = !a; // false, because a is true
+        displayResult('Logical NOT (!a)', notResult);
+
+        notResult = !b; // true, because b is false
+        displayResult('Logical NOT (!b)', notResult);
+
+        // Complex example using multiple logical operators
+        let complexResult = (a || b) && (!b || c); // true, because (true || false) && (true || true)
+        displayResult('Complex logical expression ((a || b) && (!b || c))', complexResult);
+    </script>
+</body>
+</html>

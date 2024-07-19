@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>example for array methods</title>
+</head>
+<body>
+    <script type="text/javascript">
+        
+        var bikes=['bajaj','tvs','honda','splender','yamaha'];
+        var cars=['swift','audi','ford','bmw'];
+
+        document.write('<br>lenght of bikes='+bikes.length);
+        document.write('<br><br>lenght of cars='+cars.length);
+        document.write('');
+
+        //create empty array
+        var vehicles=[];
+        //concat two array
+        vehicles=bikes.concat(cars);
+
+        document.write('<br><br>vehicles='+vehicles)
+        document.write('<br><br>list of bikes='+bikes);
+        document.write('<br><br>list of cars='+cars);
+
+        vehicles=bikes.join('-');
+        document.write('<br><br>vehicles='+vehicles)
+        document.write('<br><br>index of tvs='+bikes.indexOf('tvs'));
+
+        bikes.push('activa');
+        bikes.unshift('ktm');
+
+        document.write('<br><br> bikes='+bikes);
+        document.write('<br><br> pop last elements from bikes='+bikes.pop());
+        document.write('<br><br> remove first elements from bikes='+bikes.shift());
+        document.write('<br><br> sort bikes='+bikes.sort());
+        document.write('<br><br> slice(1,3)from cars='+cars.slice(1,3));
+        
+        document.write('<br><br> print bikes using for each method');
+        bikes.forEach((b)=>{
+            document.write('<br>'+b)
+        });
+
+    </script>
+</body>
+</html>

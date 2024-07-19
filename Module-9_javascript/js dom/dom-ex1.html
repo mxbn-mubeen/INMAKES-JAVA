@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Exampl-1e</title>
+</head>
+<body>
+    <h1>Web Programming Languages</h1>
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+    </ul>
+    <p id="demo"></p>
+
+    <script language="javascript">
+        var x = document.getElementsByTagName("li");
+        document.getElementById("demo").innerHTML =
+            "1st list item: " + x[0].innerHTML +
+            "<br>2nd list item: " + x[1].innerHTML +
+            "<br>3rd list item: " + x[2].innerHTML;
+
+        document.getElementById("demo").style.color = "red";
+    </script>
+</body>
+</html>

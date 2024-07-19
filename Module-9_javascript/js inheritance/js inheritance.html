@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Inheritance</title>
+</head>
+<body>
+    <h1>Inheritance in JavaScript</h1>
+
+    <script language="javascript">
+        class Area {
+            _pi = 3.14; // protected field (constructor)
+
+            constructor(){
+                document.write('<br>Super Class Constructor');
+            }
+            showArea() {
+                
+                document.write('<br>Area is not defined');
+            }
+        }
+
+        class Circle extends Area {
+            getpi() {
+                document.write('<br>Value of pi: ' + this.pi);
+            }
+        }
+
+        a = new Area(); // Constructor calling
+        c = new Circle(); // Super class Constructor calling
+
+        a.showArea();
+        c.showArea();
+        c.getpi();
+    </script>
+</body>
+</html>

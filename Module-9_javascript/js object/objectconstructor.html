@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object constructor</title>
+</head>
+<body>
+    <script>
+        function person(name,gender,age){ //constructor
+            this.name=name;
+            this.gender=gender;
+            this.age=age;
+        }
+        
+        p1=new person('ramiya','female',32);//constructor calling
+        document.write('<br>typeof(p1)='+typeof(p1));
+
+        p2=new person('tamilselavan','male',38);//constructor calling
+        document.write('<br>typeof(p2)='+typeof(p2));
+
+        document.write('<br>'+p1.name+','+p1.gender+','+p1.age);
+        document.write('<br>'+p2.name+','+p2.gender+','+p2.age);
+
+        //assigning new property
+
+        person['name']='selvam';
+        person['gender']='male';
+        person['age']=56;
+
+        document.write('<br>'+person.name+','+person.gender+','+person.age);
+        document.write('<br> person.length='+person.length);//lenght determine the no of properties(name,age,gender)
+
+
+    </script>
+</body>
+</html>

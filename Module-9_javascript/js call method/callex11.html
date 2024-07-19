@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The `call` Method with Arguments</title>
+</head>
+<body>
+    <h1>javascript function call</h1>
+    <p>It calls the employee details of emp2:</p>
+    <p id="demo"></p>
+
+    <script>
+        var employee = {
+            details: function(designation, experience) {
+                return this.name + " " + this.id + "<br>" + designation + "<br>" + experience;
+            } 
+        }
+
+        var emp1={
+            name: "Aadhirai",
+            id: 123
+        }
+
+        var emp2 = {
+            name: "Paavai",
+            id: 456
+        };
+
+        var x = employee.details.call(emp2, "GManager", "14 years");
+        document.getElementById("demo").innerHTML = x;
+    </script>
+</body>
+</html>

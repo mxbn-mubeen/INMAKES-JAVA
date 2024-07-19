@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sign up</title>
+    <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+    <div class="box">
+        <fieldset>
+            <legend>sign up</legend>
+            <form>
+                <div>
+                    <label for="txtuser">username:</label>
+                </div>
+
+                <div id="input">
+                    <input type="text" id="txtuser" autocomplete="off">
+                </div>
+
+                <div id="error1" class="error"></div>
+                
+                <div>
+                    <label for="txtemail">email:</label>
+                </div>
+                <div id="input">
+                    <input type="text" id="txtemail" autocomplete="off">
+                </div>
+
+                <div id="error2" class="error"></div>
+                <div>
+                    <label for="txtpass">password:</label>
+                </div>
+                <div id="input">
+                    <input type="password" id="txtpass" autocomplete="off">
+                </div>
+                
+                <div id="error3" class="error"></div>
+                <div>
+                    <label for="txtconfirmpass">confirm password</label>
+                </div>
+                <div id="input">
+                    <input type="password" id="txtconfirmpass" autocomplete="off">
+                </div>
+
+                <div id="error4" class="error"></div>
+                <input type="submit" id="submit1" value="register" onclick="return validate()">
+            </form>
+        </fieldset>
+    </div>
+    <script src="signup.jss"></script>
+</body>
+</html>

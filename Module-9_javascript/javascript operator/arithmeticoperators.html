@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arithmetic Operators Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        pre {
+            background: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Arithmetic Operators Example</h1>
+    <div id="output"></div>
+
+    <script>
+        function displayResult(description, result) {
+            const outputDiv = document.getElementById('output');
+            const resultElement = document.createElement('pre');
+            resultElement.textContent = `${description}: ${result}`;
+            outputDiv.appendChild(resultElement);
+        }
+
+        let x = 10;
+        let y = 3;
+
+        let addition = x + y;
+        displayResult('Addition (x + y)', addition);
+
+        let subtraction = x - y;
+        displayResult('Subtraction (x - y)', subtraction);
+
+        let multiplication = x * y;
+        displayResult('Multiplication (x * y)', multiplication);
+
+        let division = x / y;
+        displayResult('Division (x / y)', division);
+
+        let modulus = x % y;
+        displayResult('Modulus (x % y)', modulus);
+
+        let exponentiation = x ** y;
+        displayResult('Exponentiation (x ** y)', exponentiation);
+
+        let increment = x;
+        increment++;
+        displayResult('Increment (x++)', increment);
+
+        let decrement = x;
+        decrement--;
+        displayResult('Decrement (x--)', decrement);
+    </script>
+</body>
+</html>

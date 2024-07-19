@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>windowdailogbox</title>
+</head>
+<body>
+    <h1>window dailog box</h1>
+    <form>
+        <input type="button" id="button1" value="display alert" onclick="myFunction(1)"><br><br>
+        <input type="button" id="button2" value="display prompt" onclick="myFunction(2)"><br><br>
+        <input type="button" id="button3" value="display confirm" onclick="myFunction(3)"><br><br>
+    </form>
+    <p id="demo"></p>
+    <script>
+        function myFunction(buttonid){
+
+            switch(buttonid){
+                case 1:
+                    alert('this is alert dailog box');
+                    break;
+                case 2:
+                    var myName=prompt('enter your name:',null);
+                    alert('your input name:'+myName);
+                    break;
+                case 3:
+                    var con=confirm('would you like to confirm');
+                    if(con==true)
+                     document.getElementById('demo').innerHTML="you press ok button";
+                    else
+                        document.getElementById('demo').innerHTML="you press cancel button";
+                    break;
+
+            }
+        }
+    </script>
+</body>
+</html>

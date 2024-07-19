@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Example3</title>
+</head>
+<body>
+    <img id="image1" src="D:\\java\\Module-9_javascript\\js dom\\web.png" onmousemove="MouseMove()" onmouseout="MouseOut()">
+
+    <script language="javascript">
+        function MouseMove() {
+            document.getElementById("image1").src = "D:\\java\\Module-9_javascript\\js dom\\Java.svg";
+        }
+
+        function MouseOut() {
+            document.getElementById("image1").src = "D:\\java\\Module-9_javascript\\js dom\\web.png";
+        }
+    </script>
+</body>
+</html>

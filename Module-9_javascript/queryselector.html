@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Query Selector</title>
+</head>
+<body>
+    <h1>Query Selectors</h1>
+    <ul>
+        <li class="item1">HTML</li>
+        <li class="item2">CSS</li>
+        <li class="item3" style="color:red"><b>Javascript</b></li>
+        <li class="item4" style="color:red">JQuery</li>
+        <li class="item5">Bootstrap</li>
+    </ul>
+
+    <script type="text/javascript">
+        // Using querySelector to select the first element
+        var firstItem = document.querySelector('li');
+        document.write('First Item using Query Selector: ' + firstItem.innerHTML);
+
+        // Using querySelectorAll to select all list items
+        let listItems = document.querySelectorAll('li');
+        document.write('<br><br><b>Display All the items using QuerySelector All</b>');
+        for (let i = 0; i < listItems.length; i++) {
+            document.write('<br>' + listItems[i].innerHTML);
+        }
+
+        // Selecting the first <ul> element
+        var startItem = document.getElementsByTagName('ul')[0];
+        var firstChild = startItem.firstElementChild.innerHTML;
+        var lastChild = startItem.lastElementChild.innerHTML;
+        document.write('<br>First Child of &lt;ul&gt; Tag: ' + firstChild);
+        document.write('<br>Last Child of &lt;ul&gt; Tag: ' + lastChild);
+        document.write('<br><br><b>Display list items having style attribute</b>');
+
+        // Displaying list items having a style attribute
+        var x = document.querySelectorAll('li[style]');
+        for (let i = 0; i < x.length; i++) {
+            document.write('<br>' + x[i].innerHTML);
+        }
+
+        // Selecting the first sibling
+        var startItem = document.querySelector('.item1');
+        document.write('<br><br>First Sibling: ' + startItem.innerHTML);
+
+        // Displaying forward siblings
+        var nextSibling = startItem.nextElementSibling;
+        document.write('<br><b><u>Forward Siblings</u></b>');
+        while (nextSibling) {
+            document.write('<br>' + nextSibling.innerHTML);
+            nextSibling = nextSibling.nextElementSibling;
+        }
+
+        // Selecting the last item
+        var lastItem = document.querySelector('ul').lastElementChild;
+        document.write('<br><br>Last Item: ' + lastItem.innerHTML);
+
+        // Displaying backward siblings
+        var prevSibling = lastItem.previousElementSibling;
+        document.write('<br><b><u>Backward Siblings</u></b>');
+        while (prevSibling) {
+            document.write('<br>' + prevSibling.innerHTML);
+            prevSibling = prevSibling.previousElementSibling;
+        }
+    </script>
+</body>
+</html>

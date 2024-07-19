@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object methods</title>
+</head>
+<body>
+    <script>
+        person={
+            name:'anand',
+            gender:'male',
+            age:30,
+
+            getname(){
+                return this.name;
+            },
+            getgender(){
+                return this.gender;
+            },
+            getage(){
+                return this.age;
+            }
+        }
+
+        document.write('name:'+person.getname()+'<br>');
+        document.write('gender:'+person.getgender()+'<br>');
+        document.write('age:'+person.getage()+'<br>');
+    </script>
+</body>
+</html>

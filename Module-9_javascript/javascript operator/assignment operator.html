@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment Operators Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        pre {
+            background: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Assignment Operators Example</h1>
+    <div id="output"></div>
+
+    <script>
+        // Function to display the result in the HTML page
+        function displayResult(description, result) {
+            const outputDiv = document.getElementById('output');
+            const resultElement = document.createElement('pre');
+            resultElement.textContent = `${description}: ${result}`;
+            outputDiv.appendChild(resultElement);
+        }
+
+        // Initialize variable
+        let x = 10;
+        displayResult('Initial value of x', x);
+
+        // Assignment (=)
+        x = 5;
+        displayResult('Assignment (x = 5)', x);
+
+        // Addition assignment (+=)
+        x += 3; // equivalent to x = x + 3
+        displayResult('Addition assignment (x += 3)', x);
+
+        // Subtraction assignment (-=)
+        x -= 2; // equivalent to x = x - 2
+        displayResult('Subtraction assignment (x -= 2)', x);
+
+        // Multiplication assignment (*=)
+        x *= 4; // equivalent to x = x * 4
+        displayResult('Multiplication assignment (x *= 4)', x);
+
+        // Division assignment (/=)
+        x /= 2; // equivalent to x = x / 2
+        displayResult('Division assignment (x /= 2)', x);
+
+        // Modulus assignment (%=)
+        x %= 3; // equivalent to x = x % 3
+        displayResult('Modulus assignment (x %= 3)', x);
+
+        // Exponentiation assignment (**=)
+        x **= 2; // equivalent to x = x ** 2
+        displayResult('Exponentiation assignment (x **= 2)', x);
+    </script>
+</body>
+</html>

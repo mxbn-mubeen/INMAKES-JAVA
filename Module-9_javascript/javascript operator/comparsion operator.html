@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparison Operators Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        pre {
+            background: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Comparison Operators Example</h1>
+    <div id="output"></div>
+
+    <script>
+        // Function to display the result in the HTML page
+        function displayResult(description, result) {
+            const outputDiv = document.getElementById('output');
+            const resultElement = document.createElement('pre');
+            resultElement.textContent = `${description}: ${result}`;
+            outputDiv.appendChild(resultElement);
+        }
+
+        // Initialize variables
+        let a = 10;
+        let b = '10';
+        let c = 5;
+
+        // Equal (==)
+        let isEqual = (a == b); // true, because == performs type coercion
+        displayResult('Equal (a == b)', isEqual);
+
+        // Strict Equal (===)
+        let isStrictEqual = (a === b); // false, because === checks both value and type
+        displayResult('Strict Equal (a === b)', isStrictEqual);
+
+        // Not Equal (!=)
+        let isNotEqual = (a != c); // true, because 10 is not equal to 5
+        displayResult('Not Equal (a != c)', isNotEqual);
+
+        // Strict Not Equal (!==)
+        let isStrictNotEqual = (a !== b); // true, because !== checks both value and type
+        displayResult('Strict Not Equal (a !== b)', isStrictNotEqual);
+
+        // Greater Than (>)
+        let isGreaterThan = (a > c); // true, because 10 is greater than 5
+        displayResult('Greater Than (a > c)', isGreaterThan);
+
+        // Greater Than or Equal (>=)
+        let isGreaterThanOrEqual = (a >= 10); // true, because 10 is equal to 10
+        displayResult('Greater Than or Equal (a >= 10)', isGreaterThanOrEqual);
+
+        // Less Than (<)
+        let isLessThan = (c < a); // true, because 5 is less than 10
+        displayResult('Less Than (c < a)', isLessThan);
+
+        // Less Than or Equal (<=)
+        let isLessThanOrEqual = (c <= 5); // true, because 5 is equal to 5
+        displayResult('Less Than or Equal (c <= 5)', isLessThanOrEqual);
+    </script>
+</body>
+</html>

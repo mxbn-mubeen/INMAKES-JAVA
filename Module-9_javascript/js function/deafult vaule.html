@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function value as default parameters</title>
+</head>
+<body>
+    <script>
+        const sum=()=>15;
+        const calculate=function(x,y=x*sum()){
+            return x+y;
+        }
+        const result=calculate(10);
+        document.write('result='+result);
+    </script>
+</body>
+</html>

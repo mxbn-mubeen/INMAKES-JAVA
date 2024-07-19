@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>user-defined-function</title>
+</head>
+<body>
+    <h1>user defined function</h1>
+    <script>
+        function showarea(lenght,breadth){
+            this.lenght=lenght;
+            this.breadth=breadth;
+            area=lenght*breadth;
+            
+            return area;
+        }
+
+        rect1=showarea(2,3);//calling function
+        document.write('<br> area of rectangle1='+rect1);
+
+        rect2=showarea(6.5,3.8);//calling function
+        document.write('<br> area of rectangle2='+rect2);
+    </script>
+</body>
+</html>

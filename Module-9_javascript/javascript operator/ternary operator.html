@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ternary Operator Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        pre {
+            background: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ternary Operator Example</h1>
+    <div id="output"></div>
+
+    <script>
+        function displayResult(description, result) {
+            const outputDiv = document.getElementById('output');
+            const resultElement = document.createElement('pre');
+            resultElement.textContent = `${description}: ${result}`;
+            outputDiv.appendChild(resultElement);
+        }
+
+        let age = 18;
+
+        let canVote = (age >= 18) ? "Yes" : "No";
+        displayResult('Can vote (age >= 18 ? "Yes" : "No")', canVote);
+
+        // Another example with ternary operator
+        let number = 5;
+        let parity = (number % 2 === 0) ? "Even" : "Odd";
+        displayResult('Number parity (number % 2 === 0 ? "Even" : "Odd")', parity);
+    </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for of loop iterate object</title>
+    <script>
+        function myfuntion(){
+            for(const arg of arguments){
+            document.write(arg+"<br>")
+               }
+               document.write("Total Arguments="+arguments.length);
+        }
+ 
+    </script>
+</head>
+<body>
+    <script>
+        myfuntion(1,2,3,4,5);
+    </script>
+</body>
+</html>

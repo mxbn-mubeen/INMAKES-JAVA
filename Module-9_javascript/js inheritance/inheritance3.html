@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Inheritance</title>
+</head>
+<body>
+    <h1>Hierarchical Inheritance in JavaScript</h1>
+
+    <script language="javascript">
+        class Area {
+            _pi = 3.14; // protected field (constructor)
+            _area = 0;
+
+            constructor() {
+                document.write('<br> Area is the Super Class ');
+            }
+            showArea() {
+                document.write('<br>Area is not defined');
+            }
+        }
+
+        class Circle extends Area {
+            #radius = 0; // private field
+
+            constructor(value) {
+                super(); // calling super class constructor
+                this.#radius = value;
+                document.write('<br>Circle extends Area');
+            }
+
+            /* method overriding here */
+            showArea() {
+                this._area = this._pi * this.#radius * this.#radius;
+                document.write("<br>Area of Circle = " + this._area);
+            }
+        }
+
+        class Square extends Area {
+            #a = 0; // private field
+
+            constructor(value) {
+                super();
+                this.#a = value;
+                document.write("<br>Square extends Area");
+            }
+
+            /* method overriding here */
+            showArea() {
+                this._area = this.#a * this.#a;
+                document.write('<br>Area of Square = ' + this._area);
+            }
+        }
+
+        class Rectangle extends Area {
+            #l = 0;
+            #b = 0; // private field
+
+            constructor(value1, value2) {
+                super();
+                this.#l = value1;
+                this.#b = value2;
+                document.write("<br>Rectangle extends Area");
+            }
+
+            /* method overriding here */
+            showArea() {
+                this._area = this.#l * this.#b;
+                document.write('<br>Area of Rectangle = ' + this._area);
+            }
+        }
+
+         a = new Area(); // Constructor calling
+        a.showArea();
+
+        c = new Circle(5); // Constructor calling with a parameter
+        c.showArea();
+
+        s = new Square(5); // Constructor calling with a parameter
+        s.showArea();
+
+       r = new Rectangle(8, 10); // Constructor calling with two parameters
+        r.showArea();
+    </script>
+</body>
+</html>
