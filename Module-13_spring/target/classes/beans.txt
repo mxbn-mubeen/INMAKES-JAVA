@@ -1,0 +1,226 @@
+Here is the corrected and aligned version of the document with better formatting:
+
+-------------------
+
+## Beans Configuration for Bank
+
+**app.java**
+
+ApplicationContext context = new ClassPathXmlApplicationContext("Beans.xml");
+Bank bankObj = context.getBean("bank", Bank.class); 
+bankObj.deposit(24550);
+
+
+**beans.xml**
+
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="bank" class="com.demo.spring.Module_13_spring.Bank" />
+</beans>
+---------------------------
+
+## Book Configuration
+
+**beans.xml**
+
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Constructor-based initialization -->
+    <bean id="book1" class="com.demo.spring.Module_13_spring.Book">
+        <constructor-arg name="bookid" value="1000"/>
+        <constructor-arg name="bookname" value="springframework"/>
+        <constructor-arg name="author" value="craig walls"/>
+        <constructor-arg name="price" value="499"/>
+    </bean>
+
+    <!-- Default constructor-based initialization -->
+    <bean id="book2" class="com.demo.spring.Module_13_spring.Book"/>
+
+    <!-- Setter-based initialization -->
+    <bean id="book3" class="com.demo.spring.Module_13_spring.Book">
+        <property name="bookid" value="1000"/>
+        <property name="bookname" value="springframework"/>
+        <property name="author" value="craig walls"/>
+        <property name="price" value="499"/>
+    </bean>
+</beans>
+
+
+**app.java**
+
+ApplicationContext context = new ClassPathXmlApplicationContext("Beans.xml");
+Book bookObj = context.getBean("book1", Book.class);
+bookObj.display();
+
+--------------------------------------
+
+## Vehicle, Car, and Bike Configuration
+
+**beans.xml**
+
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Tightly coupled -->
+    <bean id="car" class="com.demo.spring.Module_13_spring.Car"/>
+    <bean id="bike" class="com.demo.spring.Module_13_spring.Bike"/>
+
+    <!-- Loosely coupled -->
+    <bean id="vehicle1" class="com.demo.spring.Module_13_spring.Bike"/>
+    <bean id="vehicle2" class="com.demo.spring.Module_13_spring.Car"/>
+</beans>
+
+
+**app.java**
+
+ApplicationContext context = new ClassPathXmlApplicationContext("Beans.xml");
+Car car = context.getBean("car", Car.class);
+car.ride();
+
+Bike bike = context.getBean("bike", Bike.class);
+bike.ride();
+
+// Using loosely coupled beans
+Vehicle vehicle1 = context.getBean("vehicle1", Vehicle.class);
+vehicle1.ride();
+
+Vehicle vehicle2 = context.getBean("vehicle2", Vehicle.class);
+vehicle2.ride();
+
+-------------------------------------------------
+
+## Monitor and Computer Configuration
+
+**beans.xml**
+
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Setter-based dependency injection -->
+    <bean id="mon1" class="com.demo.spring.Module_13_spring.Monitor">
+        <property name="size" value="15"/>
+        <property name="pixels" value="1024"/>
+    </bean>
+
+    <bean id="comp1" class="com.demo.spring.Module_13_spring.Computer">
+        <property name="company" value="dell"/>
+        <property name="price" value="65000"/>
+        <property name="mn" ref="mon1"/>
+    </bean>
+
+    <!-- Constructor-based dependency injection -->
+    <bean id="mon2" class="com.demo.spring.Module_13_spring.Monitor">
+        <property name="size" value="15"/>
+        <property name="pixels" value="1024"/>
+    </bean>
+
+    <bean id="comp2" class="com.demo.spring.Module_13_spring.Computer">
+        <property name="company" value="dell"/>
+        <property name="price" value="65000"/>
+        <constructor-arg ref="mon2"/>
+    </bean>
+</beans>
+
+note:don't add anontation in computer and monitor in this program 
+
+**app.java**
+
+ApplicationContext context = new ClassPathXmlApplicationContext("Beans.xml");
+
+Computer comp1 = context.getBean("comp1", Computer.class);
+comp1.display();
+
+Computer comp2 = context.getBean("comp2", Computer.class);
+comp2.display();
+----------------------------
+
+It looks like you're trying to configure your Spring application using annotations and component scanning. Here is a combined and corrected version of your configuration, ensuring that both XML and Java code are aligned properly:
+
+---
+
+## Application Configuration with Annotations and Component Scanning
+
+**app.java**
+
+```java
+ApplicationContext context = new ClassPathXmlApplicationContext("Beans.xml");
+Computer c = context.getBean(Computer.class);
+c.display();
+```
+
+**beans.xml**
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           https://www.springframework.org/schema/beans/spring-beans.xsd
+           http://www.springframework.org/schema/context
+           https://www.springframework.org/schema/context/spring-context.xsd">
+
+    <context:annotation-config />
+    <context:component-scan base-package="com.demo.spring.Module_13_spring" />
+</beans>
+```
+
+**Note:**
+
+
+Example of a `Computer` class:
+
+```java
+package com.demo.spring.Module_13_spring;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component
+public class Computer {
+    
+    @Autowired
+    private Monitor monitor;
+
+    private String company;
+    private double price;
+
+    // getters and setters
+
+    public void display() {
+        System.out.println("Computer details: ");
+        System.out.println("Company: " + company);
+        System.out.println("Price: " + price);
+        monitor.display();
+    }
+}
+
+@Component
+public class Monitor {
+    
+    private int size;
+    private int pixels;
+
+    // getters and setters
+
+    public void display() {
+        System.out.println("Monitor size: " + size + " inches");
+        System.out.println("Resolution: " + pixels + " pixels");
+    }
+}
+```
+
