@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Custom Styled UI Elements</title>
+<style>
+   /* Custom button styles */
+   button {
+        padding: 10px 20px;
+        font-size: 16px;
+        border: none;
+        border-radius: 5px;
+        background-color: #007bff;
+        color: #fff;
+        cursor: pointer;
+        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Custom checkbox styles */
+    .custom-checkbox {
+        display: inline-block;
+        position: relative;
+        cursor: pointer;
+        user-select: none;
+    }
+
+    .custom-checkbox input {
+        opacity: 0;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+
+    .custom-checkbox .checkmark {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        border: 2px solid #ccc;
+        border-radius: 3px;
+        position: relative;
+    }
+
+    .custom-checkbox input:checked + .checkmark::before {
+        content: '\2713'; /* Unicode checkmark symbol */
+        font-size: 14px;
+        color: #007bff;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    /* Custom scrollbar styles (for demonstration) */
+    body {
+        height: 2000px; /* Generate enough content to enable scrolling */
+    }
+
+    /* Styling the scrollbar */
+    body::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    body::-webkit-scrollbar-track {
+        background: #f1f1f1;
+    }
+
+    body::-webkit-scrollbar-thumb {
+        background: #888;
+        border-radius: 5px;
+    }
+</style>
+</head>
+<body>
+    <h2>Custom Styled UI Elements</h2>
+
+    <!-- Custom styled button -->
+    <button>Click Me!</button>
+
+    <br><br>
+
+    <!-- Custom styled checkbox -->
+    <label class="custom-checkbox">
+        <input type="checkbox">
+        <span class="checkmark"></span>
+        Checkbox Label
+    </label>
+
+    <br><br>
+
+    <!-- Scrollable content with custom scrollbar styles -->
+    <div>
+        Scroll down to see the custom scrollbar<br>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br>
+       Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo ipsam non obcaecati qui reiciendis earum beatae perspiciatis, quisquam aperiam vel labore, iure amet. Dolor dignissimos molestias dolorum ipsam hic enim vitae veritatis deserunt, voluptates nisi nostrum accusantium explicabo eum labore, sapiente accusamus sit quo? Distinctio itaque optio aut delectus quibusdam magnam molestiae dolor temporibus libero facilis totam nemo veritatis praesentium architecto aperiam quos, animi perspiciatis, officia, ratione earum? Sequi similique maxime porro eligendi praesentium deleniti assumenda, doloremque ipsum, quidem quo rem! Recusandae quod laboriosam aperiam, alias saepe consectetur quasi dolores, cum nesciunt dolor perspiciatis quisquam nisi numquam fuga, voluptatibus laudantium modi cupiditate atque reprehenderit. Quo reprehenderit voluptates eveniet veniam pariatur fuga, inventore modi? Autem nemo eligendi asperiores a veritatis earum quibusdam culpa saepe id commodi minima maiores consequatur labore est eum, qui enim mollitia natus reiciendis ratione soluta perferendis voluptatum iusto! Perferendis repudiandae dolore, ullam cum amet est, quam unde, ab iste ipsa voluptatibus eius voluptate minus enim. Corrupti aliquid laudantium tenetur quaerat obcaecati labore voluptas dolore necessitatibus expedita nesciunt impedit adipisci nulla cupiditate sit explicabo, laboriosam, quidem a. Ipsum voluptatum tempore, dolorem esse ea natus distinctio vero molestias provident excepturi. Sunt provident unde ex similique vero est quaerat corporis quidem praesentium mollitia possimus cupiditate repellendus quae, consectetur quisquam tempore! Odit nesciunt deleniti quidem incidunt eius veritatis nam pariatur dolor tenetur ratione quam, architecto optio tempora voluptate ipsam laboriosam corrupti est. Rem tempora sit vero vitae omnis ea non blanditiis eius iure neque. Eveniet incidunt earum ullam saepe qui, mollitia neque perspiciatis maxime at aliquid in maiores nobis, laboriosam voluptate obcaecati esse numquam aut? Nemo perferendis dolorem excepturi ut voluptates dolore consectetur saepe quasi repellendus nobis repudiandae quod odio earum aperiam, fugit rem hic dolorum, impedit assumenda iure, rerum id autem temporibus distinctio? At voluptates libero, tenetur esse, maiores id distinctio dolorem in autem culpa error cumque quia corporis consequuntur a ad provident magni, commodi ipsam ea nemo quisquam atque porro! Eligendi minima iure enim culpa, molestias dignissimos necessitatibus rerum exercitationem ab explicabo dolorum eveniet blanditiis eius iste dicta reiciendis, ratione totam odio, tenetur consequatur nostrum officiis asperiores. Quidem nemo explicabo soluta vero. Eligendi corrupti eveniet similique incidunt ipsa, fugiat autem mollitia? Reprehenderit culpa dolores nemo doloremque quos aliquid consequatur facilis sed qui, totam exercitationem reiciendis nulla voluptatum blanditiis temporibus, commodi ab quam doloribus molestias. Repellendus possimus vero error magni saepe. Quia quisquam dolore perspiciatis facilis harum voluptas in eius modi fugit reiciendis, maiores architecto voluptatibus repudiandae nesciunt excepturi nisi, vero doloremque? Praesentium tempore natus sit ut illum, cumque optio error dolorum deleniti magni non ipsum similique impedit earum, eos necessitatibus ab obcaecati voluptatem eveniet et nihil, incidunt possimus dolores ad. Minus distinctio eaque omnis accusamus, excepturi reprehenderit exercitationem cupiditate, dicta deserunt vitae eius repudiandae voluptas obcaecati quaerat tempora vero porro? Dolor, maxime voluptatibus iste at aliquid alias laborum amet mollitia. Vel, error voluptatibus? Molestias rerum nulla, praesentium totam voluptate quibusdam quos voluptas incidunt cupiditate omnis pariatur adipisci soluta illum, laborum nihil minus! Dolores animi magnam at quisquam maiores voluptate, numquam magni. Inventore quis laborum odit numquam architecto quos, dolores distinctio omnis aperiam fugiat id sed, aspernatur magni animi a non, porro iusto perferendis suscipit adipisci voluptatibus deleniti. Ex tempore quo animi officiis blanditiis nobis saepe aspernatur, consequatur voluptas hic numquam rerum id non explicabo, minima illum ducimus libero natus odit nisi deserunt tenetur doloribus perspiciatis perferendis. Labore debitis ut aut tempore voluptatum quam praesentium saepe inventore sunt obcaecati, explicabo provident delectus eum commodi ullam asperiores pariatur quia ipsa, velit cumque alias! Voluptates, optio? Sequi accusamus illum sunt alias. Ipsa dolores doloremque doloribus cupiditate impedit, magnam maiores optio, voluptas, suscipit enim vitae iure consectetur tempore perferendis et natus obcaecati accusamus ipsum blanditiis omnis. Assumenda ea error dolorum ullam. Animi, deleniti ut. Accusantium atque rem vero consequatur. Molestiae rem illo quis fuga excepturi itaque voluptates eveniet, distinctio aperiam voluptas recusandae blanditiis. A modi omnis ut totam earum. Eius, odio voluptatibus reprehenderit aut dignissimos quia. Labore ad sit modi voluptatem facere rem maiores necessitatibus consectetur vel atque quidem aliquid fugiat quis sapiente nemo quisquam molestiae similique distinctio alias, quaerat tempore. Officiis dolore ad nihil ullam possimus vero labore ipsum, aperiam sequi necessitatibus dignissimos culpa eum modi, omnis pariatur quam adipisci quaerat beatae exercitationem perspiciatis id aliquid! Fugiat blanditiis voluptatem voluptatibus officiis enim vitae nam corrupti quibusdam quidem quaerat quisquam, voluptatum natus itaque! Quod aspernatur nobis accusantium iure eligendi, pariatur vel voluptatibus officiis reiciendis amet perferendis veritatis possimus repellendus assumenda adipisci facere reprehenderit alias? Amet quae, quidem, quas earum eveniet culpa harum dolor molestias totam maiores necessitatibus magnam illo! Cum officia ex molestiae porro aperiam! At nulla eveniet, minima, ut non consequatur esse illum eum ipsum ipsa quasi vero minus porro praesentium ratione accusantium facilis doloremque est! Possimus, laboriosam! Mollitia, eum, ullam sit est adipisci enim ducimus libero dignissimos, at laudantium nesciunt natus harum hic. Repellendus eveniet nostrum nobis explicabo cupiditate commodi atque itaque ratione quaerat molestias alias fugiat non vero, delectus vitae similique facilis aperiam suscipit laborum consequuntur. Voluptates aspernatur voluptate odit, eveniet harum nobis reprehenderit iusto, cumque maiores esse sit a! Qui asperiores ipsa velit dolores magni. Dolorem ullam ut incidunt, sint ducimus id ab architecto. Quaerat aperiam ut eius aspernatur suscipit quisquam iure labore illum aliquid, optio repudiandae quo dolorem, mollitia pariatur voluptate quod explicabo minus. Ullam quisquam quasi commodi cum labore, nam deserunt provident expedita, amet obcaecati eius alias animi? Omnis quis accusamus amet cum neque, hic unde aut non explicabo, similique soluta quisquam. Accusantium quaerat, quam asperiores enim libero possimus. Quia enim ratione accusamus nemo ipsum reprehenderit, necessitatibus tempora dolor ullam eos sit. Aliquam totam temporibus quisquam architecto quod minima, dolorum repellendus reiciendis illo odit corporis, alias laboriosam quis, molestiae sapiente quos aperiam! Perferendis facere veniam ipsam maxime consectetur quo tenetur dolorem vel incidunt sunt, facilis iste repellat distinctio aspernatur ratione necessitatibus eaque dolores cumque temporibus reiciendis nobis debitis. Nam nostrum quam rem recusandae aspernatur dolores, illum neque ad quos nemo harum eius mollitia. Ab nihil, illo voluptas ducimus fuga iure quis nulla, ad perferendis, iste quae eveniet?
+    </div>
+</body>
+</html>

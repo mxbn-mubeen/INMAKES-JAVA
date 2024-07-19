@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas Example</title>
+</head>
+<body>
+
+<h2>Drawing on Canvas</h2>
+
+<!-- Canvas element -->
+<canvas id="myCanvas" width="400" height="200" style="border: 1px solid black;"></canvas>
+
+<script>
+    // Get the canvas element from the DOM
+    const canvas = document.getElementById('myCanvas');
+
+    // Check if the browser supports the canvas element
+    if (canvas.getContext) {
+        // Get the 2D drawing context
+        const ctx = canvas.getContext('2d');
+
+        // Draw a red rectangle
+        ctx.fillStyle = 'red';
+        ctx.fillRect(50, 50, 100, 80); // (x, y, width, height)
+
+        // Draw a blue circle
+        ctx.beginPath();
+        ctx.arc(300, 100, 50, 0, 2 * Math.PI); // (x, y, radius, startAngle, endAngle)
+        ctx.fillStyle = 'blue';
+        ctx.fill();
+    } else {
+        // Canvas is not supported
+        console.log('Canvas is not supported in this browser.');
+    }
+</script>
+
+</body>
+</html>

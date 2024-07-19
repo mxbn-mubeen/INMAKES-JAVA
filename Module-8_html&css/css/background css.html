@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background CSS Examples</title>
+    <style>
+        /* Body background with color */
+        body {
+            background-color: #f2f2f2;
+        }
+
+        /* Background image with fixed size */
+        .background-image-fixed {
+            background-image: url('https://cdn.pixabay.com/photo/2017/11/02/00/34/parrot-2909828_960_720.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 400px; /* Fixed height */
+            padding: 20px;
+            color: white;
+        }
+
+        /* Background image with full screen size */
+        .background-image-fullscreen {
+            background-image: url('https://cdn.pixabay.com/photo/2017/11/02/00/34/parrot-2909828_960_720.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100vh; /* Full screen height */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 24px;
+            text-align: center;
+        }
+
+        /* Gradient background */
+        .gradient-background {
+            background: linear-gradient(to right, #ff416c, #ff4b2b);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Background with solid color -->
+    <h2>Background with Solid Color</h2>
+
+    <!-- Background with fixed size image -->
+    <div class="background-image-fixed">
+        <h2>Background Image (Fixed Size)</h2>
+        <p>This is a fixed size background image example.</p>
+    </div>
+
+    <!-- Background with full screen size image -->
+    <div class="background-image-fullscreen">
+        <div>
+            <h2>Background Image (Full Screen)</h2>
+            <p>This is a full screen background image example.</p>
+        </div>
+    </div>
+
+    <!-- Gradient Background -->
+    <div class="gradient-background">
+        <h2>Gradient Background</h2>
+        <p>This is a gradient background example.</p>
+    </div>
+
+</body>
+</html>

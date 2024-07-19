@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table CSS Example</title>
+    <style>
+        /* Table styles */
+        table {
+            width: 100%;
+            border-collapse: collapse; /* Collapse table borders */
+            margin-bottom: 20px;
+        }
+
+        /* Table header styles */
+        th {
+            background-color: #007bff; /* Blue background color */
+            color: white; /* White text color */
+            padding: 10px;
+            text-align: left;
+        }
+
+        /* Table row styles */
+        tr {
+            background-color: #f8f9fa; /* Light gray background color */
+        }
+        tr:hover{
+            background-color: crimson;
+        }
+
+        /* Alternate row styles */
+        tr:nth-child(even) {
+            background-color: #41082f; /* Lighter gray background for even rows */
+        }
+
+        /* Table cell styles */
+        td {
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Styled Table Example</h2>
+
+    <!-- Table with CSS styles -->
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>City</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>John Doe</td>
+                <td>30</td>
+                <td>New York</td>
+            </tr>
+            <tr>
+                <td>Jane Smith</td>
+                <td>25</td>
+                <td>Los Angeles</td>
+            </tr>
+            <tr>
+                <td>Mike Johnson</td>
+                <td>40</td>
+                <td>Chicago</td>
+            </tr>
+            <tr>
+                <td>Sarah Brown</td>
+                <td>35</td>
+                <td>Miami</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>

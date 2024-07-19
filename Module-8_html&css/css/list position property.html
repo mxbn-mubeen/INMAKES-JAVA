@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List Style Position CSS Example</title>
+    <style>
+        /* Container styles */
+        .list-container {
+            padding: 20px;
+        }
+
+        /* Unordered list with inside position */
+        ul.inside-position {
+            list-style-type: square;
+            list-style-position: inside; /* Place list marker inside content */
+            margin-bottom: 20px;
+        }
+
+        /* Unordered list with outside position */
+        ul.outside-position {
+            list-style-type: circle;
+            list-style-position: outside; /* Place list marker outside content */
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="list-container">
+
+        <h2>List Style Position Examples</h2>
+
+        <!-- Unordered list with inside position -->
+        <p>Unordered List with Inside Position:</p>
+        <ul class="inside-position">
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+        </ul>
+
+        <!-- Unordered list with outside position -->
+        <p>Unordered List with Outside Position:</p>
+        <ul class="outside-position">
+            <li>Item A</li>
+            <li>Item B</li>
+            <li>Item C</li>
+        </ul>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Tag Examples</title>
+</head>
+<body>
+
+<h2>User Registration Form</h2>
+
+<form action="/submit-form.php" method="POST">
+
+    <!-- Text Input -->
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" placeholder="Enter your username" required>
+    <br><br>
+
+    <!-- Email Input -->
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+    <br><br>
+
+    <!-- Password Input -->
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+    <br><br>
+
+    <!-- Checkbox Input -->
+    <input type="checkbox" id="subscribe" name="subscribe" value="yes">
+    <label for="subscribe">Subscribe to our newsletter</label>
+    <br><br>
+
+    <!-- Radio Buttons for Gender -->
+    <label>Gender:</label><br>
+    <input type="radio" id="male" name="gender" value="male">
+    <label for="male">Male</label><br>
+    <input type="radio" id="female" name="gender" value="female">
+    <label for="female">Female</label>
+    <br><br>
+
+    <!-- Number Input -->
+    <label for="age">Age:</label>
+    <input type="number" id="age" name="age" min="18" max="100">
+    <br><br>
+
+    <!-- Date Input -->
+    <label for="birthdate">Birthdate:</label>
+    <input type="date" id="birthdate" name="birthdate">
+    <br><br>
+
+    <!-- File Input -->
+    <label for="avatar">Upload Avatar:</label>
+    <input type="file" id="avatar" name="avatar">
+    <br><br>
+
+    <!-- Color Picker Input -->
+    <label for="color">Favorite Color:</label>
+    <input type="color" id="color" name="color">
+    <br><br>
+
+    <!-- Submit Button -->
+    <input type="submit" value="Register">
+
+</form>
+
+</body>
+</html>
