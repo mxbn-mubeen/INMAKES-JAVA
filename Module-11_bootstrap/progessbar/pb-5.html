@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Striped and Colored Progress Bars</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+        .progress {
+            margin: 10px;
+        }
+        .progress-bar {
+            height: 18px;
+            background-color: #2196f3;
+            border-radius: 30px;
+            position: relative;
+            width: 0;
+            transition: width 2s ease-in-out;
+            text-align: center;
+            color: white;
+        }
+    </style>
+    <script>
+        $(function() {
+            $("button").click(function() {
+                $('.progress-bar').each(function() {
+                    var $this = $(this);
+                    var percent = $this.attr('percent');
+                    var currentWidth = $this.css('width');
+                    $this.css("width", percent + '%').text(percent + '%');
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="container mt-5">
+        <h3>Animated Striped and Colored Progress Bars</h3>
+        
+        <!-- Primary Striped Animated Progress Bar -->
+        <div class="progress">
+            <div class="progress-bar bg-primary progress-bar-striped" percent="25">0%</div>
+        </div>
+        
+        <!-- Secondary Striped Animated Progress Bar -->
+        <div class="progress">
+            <div class="progress-bar bg-secondary progress-bar-striped" percent="50">0%</div>
+        </div>
+        
+        <!-- Success Striped Animated Progress Bar -->
+        <div class="progress">
+            <div class="progress-bar bg-success progress-bar-striped" percent="75">0%</div>
+        </div>
+        
+        <!-- Danger Striped Animated Progress Bar -->
+        <div class="progress">
+            <div class="progress-bar bg-danger progress-bar-striped" percent="90">0%</div>
+        </div>
+        
+        <!-- Warning Striped Animated Progress Bar -->
+        <div class="progress">
+            <div class="progress-bar bg-warning progress-bar-striped" percent="60">0%</div>
+        </div>
+        
+        <!-- Info Striped Animated Progress Bar -->
+        <div class="progress">
+            <div class="progress-bar bg-info progress-bar-striped" percent="40">0%</div>
+        </div>
+        
+        <!-- Toggle Button -->
+        <button type="button" class="btn btn-primary">Toggle Animation</button>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $("button").click(function() {
+                $('.progress-bar').each(function() {
+                    var $this = $(this);
+                    var percent = $this.attr('percent');
+                    var currentWidth = $this.css('width');
+                    $this.css("width", percent + '%').text(percent + '%');
+                });
+            });
+        });
+    </script>
+</body>
+</html>

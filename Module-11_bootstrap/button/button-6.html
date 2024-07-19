@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Example</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        $(function(){
+            $(".rdobutton").click(function(){
+                if($("#option1").prop("checked")){
+                    $("#p1").css({"font-weight":"bold"});
+                }
+                else{
+                    $("#p1").css({"font-weight":"normal"});
+                }
+                if($("#option2").prop("checked")){
+                    $("#p1").css({"font-style":"italic"});
+                }
+                else{
+                    $("#p1").css({"font-style":"normal"});
+                }
+                if($("#option3").prop("checked")){
+                    $("#p1").css({"text-decoration":"underline"});
+                }
+                else{
+                    $("#p1").css({"text-decoration":"none"});
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <p id="p1">This is a paragraph</p>
+    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+        <label class="btn btn-secondary active">
+            <input type="radio" name="options" class="rdobutton" id="option1" autocomplete="off" checked value="1">Bold
+        </label>
+        <label class="btn btn-secondary">
+            <input type="radio" name="options" class="rdobutton" id="option2" autocomplete="off" value="2">Italic
+        </label>
+        <label class="btn btn-secondary">
+            <input type="radio" name="options" class="rdobutton" id="option3" autocomplete="off" value="3">Underline
+        </label>
+    </div>
+</body>
+</html>
