@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <div data-role="page" id="page-1" data-theme="a">
+        <div data-role="header">
+            <h1>inmakes</h1>
+        </div>
+
+        <div data-role="main" class="ui-content">
+            <p>text link</p>
+            <a href="#">a standard text link</a>
+            <a href="#" class="ui-btn">link button</a>
+            <p>a list view:</p>
+
+            <ul data-role="listview" data-autodividers="true" data-inset="true">
+                <li><a href="#">andriod</a></li>
+                <li><a href="#">ios</a></li>
+            </ul>
+
+            <label for="fullname">input feild:</label>
+            <input type="text" name="fullname" id="fullname" placeholder="name..">
+            <label for="switch">toggle witch:</label>
+            <select name="switch" id="switch" data-role="slider">
+                <option value="on">on</option>
+                <option value="off" selected>off</option>
+            </select>
+        </div>
+
+        <div data-role="footer">
+            <h1>inmakes</h1>
+        </div>
+    </div>
+</body>
+</html>

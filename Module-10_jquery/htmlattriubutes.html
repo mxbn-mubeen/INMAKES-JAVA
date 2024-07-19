@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML attributes</title>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+        $(function(){
+            $("#mydiv").on("click",function(){
+
+                var divattr=$('#mydiv').attr('class')
+                alert('division attribute:'+divattr);
+
+                var divprop=$('#mydiv').prop('class')
+                alert('division property:'+divprop);
+
+                var divHTML=$('#mydiv').html();
+                alert('division property:'+divHTML);
+
+                var divtext=$('#mydiv').text();
+                alert('division property:'+divtext);
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="mydiv" class="divcls">
+        <p style="background-color: yellow; width: 100%;">this is paragraph</p>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>element selector</title>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+        $(function(){
+            $("#btn").click(function(){
+                if($("#btn").val()=='Hide Paragraph'){
+                    $("p").hide();
+                    $("#btn").val('Show Paragraph');
+                }
+                else{
+                    $("p").show();
+                    $("#btn").val('Hide Paragraph');
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <p>This is Paragraph</p>
+    <input type="button" id="btn" value="Hide Paragraph">
+</body>
+</html>

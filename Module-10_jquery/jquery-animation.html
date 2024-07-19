@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery animation</title>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+        $(function(){
+            $('#button1').click(function(){
+                myanimation();
+            });
+            $('#button2').click(function(){
+                $('img').toggle(5000);
+                $('#msg').text('image toggle');
+            });
+            $('#button3').click(function(){
+                $('img').fadeIn(5000);
+                $('#msg').text('image fadein');
+            });
+            $('#button4').click(function(){
+                $('img').fadeOut(5000);
+                $('#msg').text('image fadeout');
+            });
+            $('#button5').click(function(){
+                $('img').slideUp(5000);
+                $('#msg').text('image slideup');
+            });
+            $('#button6').click(function(){
+                $('img').slideDown(5000);
+                $('#msg').text('image slidedown');
+            });
+        });
+        function myanimation(){
+            $('img').animate({
+                height:'100px',width:'100px'
+            },
+        {
+            duration:1000,
+            complete:function(){
+                $(this).animate({
+                    height:'200px',width:'200px'
+                },5000,
+            function(){
+                $('#msg').text('animation completed');
+            });
+            }
+        });
+        }
+    </script>
+</head>
+<body>
+    <button id="button1">animation</button>
+    <button id="button2">toggle</button>
+    <button id="button3">fadeIn</button>
+    <button id="button4">fadeOut</button>
+    <button id="button5">slideUp</button>
+    <button id="button6">slideDown</button>
+    <img src="cat.jpg" alt="cat">
+    <p id="msg"></p>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>the jquery example</title>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('button').click(function(){
+                $('div').animate({left:'250px'})
+                .animate({top:'100px'})
+                .animate({left:'0px'})
+                .animate({top:'0px'});
+            });
+        });
+    </script>
+    <style>
+        button{
+            width: 125px;
+            cursor: pointer;
+        }
+        #box{
+            position: relative;
+            margin: 3px;
+            padding: 10px;
+            height: 20px;
+            width: 100px;
+            background-color: #9c8cff;
+        }
+    </style>
+</head>
+<body>
+    <p>click on start animation button to see the result:</p>
+    <div id="box">this is box</div>
+    <button>start animation</button>
+</body>
+</html>

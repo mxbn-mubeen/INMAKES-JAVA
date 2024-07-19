@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>the jquery example</title>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('div').click(function(){
+                $(this).hide(1000,function(){
+                    alert("i'm hidden now");
+                });
+            });
+        });
+    </script>
+    <style>
+       div{
+           cursor: pointer;
+            border: 2px solid #666;
+            width: 60px;
+            padding: 12px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <p>click on any of the squares to see the result:</p>
+
+    <div>hide me</div>
+    <div>hide me</div>
+    <div>hide me</div>
+</body>
+</html>

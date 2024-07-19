@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery event bubbling</title>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+        $(function() {
+            $('div').click(function(event){
+                alert(event.target.tagName+' clicked');
+            });
+        });
+    </script>
+    <style>
+        div{
+            width: 200px;
+            height: 100px;
+            background-color: red;
+        }
+        p{
+            background-color: green;
+        }
+        span{
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        this is div
+        <p>
+            <span>this is span</span>
+            this is paragraph
+        </p>
+    </div>
+</body>
+</html>

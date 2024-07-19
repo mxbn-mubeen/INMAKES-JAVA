@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>the jquery example</title>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('button').click(function(){
+                $('p').css('color','#fb7c7c').fadeIn(1000).fadeOut(1000);
+            });
+        });
+    </script>
+    <style>
+        button{
+            width: 100px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <p>click the below <button> to see the result:</button></p>
+    <button>click me</button>
+</body>
+</html>

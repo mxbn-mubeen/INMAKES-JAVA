@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>jQuery UI Menu - Default functionality</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
+    <script>
+    $(function() {
+        $("#menu").menu();
+    });
+    </script>
+    <style>
+    .ui-menu {
+        width: 200px;
+    }
+    img {
+        width: 48px;
+        height: 48px;
+    }
+    </style>
+</head>
+<body>
+    <ul id="menu">
+        <li><a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/3/38/Icons8_flat_front_end.svg">front-end</a>
+            <ul>
+                <li><a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg">html</a></li>
+                <li><a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg">css</a></li>
+                <li><a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png">javascript</a></li>
+                <li><a href="#"><img src="https://upload.wikimedia.org/wikipedia/en/9/9e/JQuery_logo.svg">jquery</a></li>
+                <li><a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Bootstrap_logo.svg">bootstrap</a></li>
+            </ul>
+        </li>
+        <li><a href="#"><img src="https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg">java</a>
+            <ul>
+                <li><a href="#"><img src="https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg">core java</a></li>
+                <li><a href="#"><img src="https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg">advanced java</a></li>
+                <li><a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/5/5d/Java_Servlet_logo.svg">servlet</a></li>
+                <li><a href="#"><img src="https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg">jsp</a></li>
+            </ul>
+        </li>
+        <li><a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a2/Backend_icon.svg">back-end</a>
+            <ul>
+                <li><a href="#"><img src="https://upload.wikimedia.org/wikipedia/en/8/87/MySQL_logo.svg">mysql</a></li>
+                <li><a href="#"><img src="https://upload.wikimedia.org/wikipedia/en/8/87/MySQL_logo.svg">jdbc connection</a></li>
+            </ul>
+        </li>
+        <li><a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a0/Spring_Framework_Logo_2018.svg">frameworks</a>
+            <ul>
+                <li><a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Spring_Framework_Logo_2018.svg">spring</a></li>
+                <li><a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Spring_Framework_Logo_2018.svg">spring mvc</a></li>
+                <li><a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Spring_Framework_Logo_2018.svg">spring boot</a></li>
+                <li><a href="#"><img src="https://upload.wikimedia.org/wikipedia/en/6/68/Hibernate_logo_a.png">hibernate</a></li>
+            </ul>
+        </li>
+    </ul>
+</body>
+</html>

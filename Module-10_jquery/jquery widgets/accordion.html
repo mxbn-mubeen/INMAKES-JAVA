@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery UI Accordion Example</title>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script src="jquery-ui-1.13.3.custom/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="jquery-ui-1.13.3.custom/jquery-ui.css">
+    <script>
+        $(document).ready(function() {
+            $('#accordion-5').accordion();
+
+            $('input[type="radio"]').change(function() {
+                if ($(this).attr('id') == 'disabledaccordion') {
+                    $('#accordion-5').accordion('option', 'disabled', true);
+                } else {
+                    $('#accordion-5').accordion('option', 'disabled', false);
+                }
+            });
+        });
+    </script>
+    <style>
+        #accordion-5 {
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div id="accordion-5">
+        <h3>What is Java?</h3>
+        <div>
+            <p>Java is a high-level, class-based, object-oriented programming language that is designed to have as few implementation dependencies as possible. It is a general-purpose programming language intended to let application developers write once, run anywhere (WORA), meaning that compiled Java code can run on all platforms that support Java without the need for recompilation.</p>
+        </div>
+        <h3>Why is it called platform independent?</h3>
+        <div>
+            <p>Java is called platform independent because its bytecode can run on any system that has a Java Virtual Machine (JVM). The JVM interprets the bytecode into machine-specific code, making Java programs portable and able to run on various platforms without modification.</p>
+        </div>
+        <h3>Where is it used?</h3>
+        <div>
+            <p>Java is used in a wide variety of computing platforms from embedded devices and mobile phones to enterprise servers and supercomputers. It is particularly popular for building large-scale enterprise applications, Android apps, web applications, scientific applications, and more.</p>
+        </div>
+        <h3>Why Inmakes?</h3>
+        <div>
+            <ul>
+                <li>Inmakes offers comprehensive educational resources and training in Java, helping individuals to enhance their programming skills and career prospects.</li>
+                <li>The institution provides hands-on experience and practical knowledge through various projects and real-world scenarios.</li>
+                <li>Inmakes has experienced instructors and a well-structured curriculum that covers all aspects of Java programming, from basic to advanced levels.</li>
+            </ul>
+        </div>
+    </div>
+    <div style="margin-top: 30px;">
+        <input type="radio" name="disable" id="disabledaccordion" value="disable"> Disable Accordion
+        <input type="radio" name="disable" id="enabledaccordion" value="enable"> Enable Accordion
+    </div>
+</body>
+</html>

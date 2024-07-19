@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DOM Traversing</title>
+    <script src="https://code.jquery.com/jquery-1.11.3.js"></script>
+    <script>
+        $(function() {
+            var $myDiv = $("#myDiv");
+            
+            $myDiv.on("click", function() {
+                $myDiv.children().each(function(index) {
+                    alert("Index: " + index + ", html: " + $(this).html());
+                });
+                
+                alert("Siblings: " + $myDiv.siblings().html());
+                alert("Children: " + $myDiv.children().html());
+                alert("Previous element to #myDiv: " + $myDiv.prev().html());
+                alert("Next element to #myDiv: " + $myDiv.next().html());
+                alert("Next element to winrDiv: " + $("#winrDiv").next().html());
+                alert("Parent of #winrDiv: " + $("#winrDiv").parent().html());
+                
+                $("p").each(function(index) {
+                    alert("Index: " + index + ", text: " + $(this).html());
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <div>
+        <p>This is First paragraph.</p>
+    </div>
+    <div id="myDiv">
+        <p>This is second paragraph.</p>
+        <div id="winrDiv">
+            <p>This is third paragraph.</p>
+        </div>
+        <ul>
+            <li>First</li>
+            <li>Second</li>
+            <li>Third</li>
+        </ul>
+    </div>
+    <div>
+        <p>This is fourth paragraph.</p>
+    </div>
+</body>
+</html>

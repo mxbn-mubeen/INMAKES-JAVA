@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery event</title>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+        $(function() {
+           $('img').click(function(){
+            $('#msg').text('image clicked...');
+           });
+
+           $('img').dblclick(function(){
+            $(this).css('filter','invert(100%)');
+            $('#msg').text('image double clicked');
+           });
+
+           $('img').mousemove(function(){
+            $(this).css('filter','graysacle(0%)');
+            $('#msg').text(' mouse move over image');
+           });
+
+           $('img').mouseout(function(){
+            $(this).css('filter','graysacle(100%)');
+            $('#msg').text(' mouse out image');
+           });
+        });
+    </script>
+</head>
+<body>
+    <img src="cat.jpg" alt="cat"></img><br>
+    <p id="msg" style="color: blue;"></p>
+</body>
+</html>

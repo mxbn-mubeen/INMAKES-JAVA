@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery event</title>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+        $(function() {
+            $('img').mousemove(function(e){
+                var x = e.pageX;
+                var y = e.pageY;
+                var newposX = x - 60;
+                var newposY = y - 60;
+                $(this).css('transform', 'translate3d('+newposX+'px,'+newposY+'px,0px)');
+            });
+        });
+    </script>
+    <style>
+        img {
+            width: 120px;
+            height: 120px;
+            position: absolute;
+            transform: translate3d(-10%, -10%, 0);
+            transition: transform 1s cubic-bezier(.02, 1.23, .79, 1.08);
+        }
+        .box {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            overflow: hidden;
+            cursor: crosshair;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <img src="ball.jpg" alt="ball">
+    </div>
+</body>
+</html>

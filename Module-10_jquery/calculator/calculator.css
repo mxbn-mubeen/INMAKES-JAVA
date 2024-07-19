@@ -1,0 +1,19 @@
+fieldset{
+    border: 1px solid blue;
+    width: 500px;
+    height: 120px;
+    padding: 12px 24px;
+}
+input{
+    width: 200px;
+    height: 20px;
+    padding: 10px 12px;
+}
+label{
+    width: 150px;
+    float: left;
+}
+button{
+    margin: 4px;
+    padding: 4px 8px;
+}

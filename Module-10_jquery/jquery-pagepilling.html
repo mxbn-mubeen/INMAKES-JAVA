@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <script src="jquery-3.7.1.min.js"></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pagePiling.js/1.5.6/jquery.pagepiling.min.css" />
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/pagePiling.js/1.5.6/jquery.pagepiling.min.js"></script>
+
+		
+      <script type="text/javascript">
+         $(document).ready(function() {
+            $('#pagepiling').pagepiling({
+               menu: '#menu',
+               anchors: ['page1', 'page2', 'page3', 'page4'],
+               sectionsColor: ['#bfda00', '#2ebe21', '#2C3E50', '#51bec4'],
+               navigation: {
+                  'position': 'right',
+                  'tooltips': ['Page 1', 'Page 2', 'Page 3', 'Page 4']
+               },
+               afterRender: function(){
+                  //playing the video
+                  $('video').get(0).play();
+               }
+            });
+         });
+      </script>
+
+      <style>
+         .section {
+            text-align: center;
+         }
+         #myVideo {
+            position: absolute;
+            z-index: 4;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-size: 100% 100%;
+            background-color: black; /* in case the video doesn't fit the whole page*/
+            background-position: center center;
+            background-size: contain;
+            object-fit: cover; /*cover video background */
+         }
+         #section1 .layer {
+            position: absolute;
+            z-index: 5;
+            width: 100%;
+            left: 0;
+            top: 43%;
+            height: 100%;
+         }
+         #section1 h1 {
+            color: #fff;
+         }
+         #infoMenu li a {
+            color: #fff;
+         }
+      </style>
+   </head>
+	
+   <body>
+      <ul id="menu">
+         <li data-menuanchor="page1" class="active">
+            <a href="#page1">Page 1</a>
+         </li>
+         <li data-menuanchor="page2">
+            <a href="#page2">Page 2</a>
+         </li>
+         <li data-menuanchor="page3">
+            <a href="#page3">Page 3</a>
+         </li>
+         
+      </ul>
+
+      <div id="pagepiling">
+         <div class="section" id="section1">
+            <video autoplay loop muted id="myVideo">
+               <source src="tunnel.mp4" type="video/jpg">
+               <source src="space.mp4" type="video/mp4">
+            </video>
+         </div>
+			
+         <div class="section" id="section2">
+            <div class="intro">
+               <h1>No limits</h1>
+               <p>Anything is possible</p>
+            </div>
+         </div>
+			
+         <div class="section" id="section3">
+            <div class="intro">
+               <h1>Simple Easy Learning</h1>
+               <p></p>
+            </div>
+         </div>
+            <div class="intro">
+               <h1>Section 4</h1>
+               <p>More content here</p>
+            </div>
+         </div>
+      </div>
+   </body>
+</html>

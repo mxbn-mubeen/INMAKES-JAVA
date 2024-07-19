@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playing Cards</title>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script src="jquery-ui-1.13.3.custom/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="jquery-ui-1.13.3.custom/jquery-ui.css">
+    <style>
+        .cards {
+            width: 100px;
+            height: 100px;
+            padding: 0.5em;
+            border: 5px solid blue;
+            display: inline-block;
+            margin: 10px;
+        }
+        #droplist {
+            margin: 50px 0;
+            width: 80%;
+            height: 300px;
+            border: 5px solid green;
+        }
+        .cards:hover {
+            border-color: red;
+        }
+        #cardlist {
+            width: 80%;
+            height: 300px;
+            border: 5px solid orange;
+        }
+    </style>
+</head>
+<body>
+    <div id="cardlist">
+        <img src="card/2.jpg" alt="2" class="cards">
+        <img src="card/3.jpg" alt="3" class="cards">
+        <img src="card/4.jpg" alt="4" class="cards">
+        <img src="card/5.jpg" alt="5" class="cards">
+        <img src="card/6.jpg" alt="6" class="cards">
+        <img src="card/7.jpg" alt="7" class="cards">
+        <img src="card/8.jpg" alt="8" class="cards">
+        <img src="card/9.jpg" alt="9" class="cards">
+        <img src="card/10.jpg" alt="10" class="cards">
+        <img src="card/ace.jpg" alt="ace" class="cards">
+        <img src="card/jack.jpg" alt="jack" class="cards">
+        <img src="card/king.jpg" alt="king" class="cards">
+        <img src="card/queen.jpg" alt="queen" class="cards">
+    </div>
+
+    <div id="droplist"></div>
+
+    <script>
+        $(function() {
+            $('.cards').draggable({
+                revert: "invalid"
+            });
+
+            $('#droplist').droppable({
+                accept: ".cards",
+                drop: function(event, ui) {
+                    ui.draggable.appendTo($(this)).css({
+                        top: '0px',
+                        left: '0px'
+                    });
+                }
+            });
+            
+            $('#droplist').resizable();
+            $('#cardlist').disableSelection();
+        });
+    </script>
+</body>
+</html>

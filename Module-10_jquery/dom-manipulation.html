@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM manipulation</title>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+        $(function(){
+            $("div").on("click",function(){
+                $("div").prepend('<p>this is prepened paragraph</p>')
+                $("div").before('<p>paragraph added First(before)</p>')
+                $("div").after('<p>paragraph added last(after)</p>')
+                $("div").append('<p>this is appended paragraph</p>')
+            });
+            $("p").on("click",function(){
+                $(this).remove();
+            });
+        });
+    </script>
+</head>
+<body>
+    <div>
+        <label>This is Div.</label><br>
+    </div>
+    <p>this is paragraph</p>
+</body>
+</html>

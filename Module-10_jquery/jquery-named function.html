@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery named function event handler</title>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+        $(function() {
+            $('#mydiv').on('mouseenter',mousehandler);
+        });
+        var mousehandler=function(){
+            alert('the mouse entered');
+        };
+    </script>
+</head>
+<body>
+    <div id="mydiv">
+        this is div
+    </div>
+</body>
+</html>

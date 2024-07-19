@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>the jquery utilities</title>
+    <script src="jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <label><input type="checkbox" name="andriod">andriod</label>
+    <label><input type="checkbox" name="ios">ios</label>
+    <script>
+        jQuery.fn.extend({
+            check:function(){
+                return this.each(function(){
+                    this.checked=true;
+                });
+            },
+            uncheck:function(){
+                return this.each(function(){
+                    this.checked=false;
+                });
+            }
+        });
+
+        $("input[type='checkbox']").check();
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>the jquery example</title>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('button').click(function(){
+                $('.inner').prepend('<p>zara</p>');
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h2>jquery prepend() method</h2>
+        <div class="inner">hello</div>
+        <div class="inner">goodbye</div>
+    </div>
+    <button>add text</button>
+</body>
+</html>

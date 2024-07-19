@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Manipulation</title>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+        $(function() {
+            $('#mydiv').css('color', 'yellow');
+            $('p').css({
+                'background-color': 'red',
+                'width': '400px'
+            });
+
+            $('#adddiv').click(function() {
+                $('#mydiv').toggleClass('bluediv');
+            });
+
+            $('#removediv').click(function() {
+                $('#mydiv').removeClass('bluediv');
+            });
+
+            $('#togglep').click(function() {
+                $('#mydiv').toggleClass('mystyle');
+            });
+        });
+    </script>
+    <style>
+        .bluediv {
+            background-color: blue;
+            margin: 10px 0 0 0;
+            height: 20px;
+        }
+
+        .myStyle {
+            font-size: 16px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div id="mydiv">
+        <p>This is the first paragraph.</p>
+    </div>
+    <div>
+        <p>This is the second paragraph.</p>
+    </div>
+    <div>
+        <p>This is the third paragraph.</p>
+    </div>
+
+    <button id="adddiv">Add Div Class</button>
+    <button id="removediv">Remove Div Class</button>
+    <button id="togglep">Toggle P-Class</button>
+</body>
+</html>

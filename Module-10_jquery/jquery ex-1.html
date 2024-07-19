@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>the jquery example</title>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#text').click(function(){
+                alert($('p').text());
+            });
+            $('#html').click(function(){
+                alert($('p').html());
+            });
+        });
+    </script>
+</head>
+<body>
+    <p>the quick<b> brown fox</b>jumps over the <b> lazy dog</b></p>
+    <button id="text">get text</button>
+    <button id="html">get html</button>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM dimension</title>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+        $(function(){
+            $("#mydiv").on("click",function(){
+
+                var divheight=$("#mydiv").height();
+                alert('division height:'+divheight)
+
+                var divinnnerheight=$("#mydiv").innerHeight();
+                alert('division innerheight:'+divinnnerheight)
+
+                var divouterheight=$("#mydiv").outerHeight();
+                alert('division outerheight:'+divouterheight)
+
+                var divoffset=$("#mydiv").offset();
+                alert('division offset:'+divoffset)
+
+                var divwidth=$("#mydiv").width();
+                alert('division width:'+divwidth);
+
+                var divinnerwidth=$("#mydiv").innerWidth();
+                alert('division innerwidth:'+divinnerwidth);
+
+                var divouterwidth=$("#mydiv").outerWidth();
+                alert('division outerwidth:'+divouterwidth);
+
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="mydiv" style="margin: 10px 10px 10px 10px;border: 5px solid black;padding:  5px 5px 5px 5px;height: 50px;">
+        this is div
+    </div>
+</body>
+</html>
